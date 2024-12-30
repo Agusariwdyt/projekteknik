@@ -1,0 +1,92 @@
+<!DOCTYPE html> 
+<html lang="en"> 
+<head> 
+  <meta charset="UTF-8"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <title>Dashboard Monitoring</title> 
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet"> 
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet"> 
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="bg-gray-100 flex items-center justify-center min-h-screen"> 
+
+  <!-- Dashboard Container -->
+  <div class="bg-white rounded-lg shadow-lg p-6 card-container text-center transform scale-110">
+    <!-- Sticky Header -->
+    <div class="sticky-header pb-4 border-b">
+      <h1 class="text-2xl font-bold text-gray-800 mb-2">Dashboard Monitoring</h1>
+      <p>Status cuaca : <span id="state" class="font-semibold">Cerah</span></p>
+    </div>
+
+    <!-- Scrollable Content -->
+    <div class="scrollable-content mt-4">
+      <div class="grid grid-cols-2 gap-6">
+        <!-- Temperature Card -->
+        <div class="bg-gray-100 rounded-lg p-4 text-gray-800">
+          <i class="fas fa-thermometer-half text-blue-500 text-3xl mb-2"></i>
+          <p class="text-lg font-semibold"><span id="suhu">22.3</span> °C</p>
+          <p class="text-sm">Temperature</p> 
+        </div>
+
+        <!-- Humidity Card -->
+        <div class="bg-gray-100 rounded-lg p-4 text-gray-800">
+          <i class="fas fa-tint text-blue-500 text-3xl mb-2"></i>
+          <p class="text-lg font-semibold"><span id="kelembaban">40</span> %</p>
+          <p class="text-sm">Humidity</p>
+        </div>
+
+        <!-- Air Pressure Card -->
+        <div class="bg-gray-100 rounded-lg p-4 text-gray-800">
+          <i class="fas fa-tachometer-alt text-blue-500 text-3xl mb-2"></i>
+          <p class="text-lg font-semibold"><span id="udara">40</span> hPa</p>
+          <p class="text-sm">Air Pressure</p>
+        </div>
+
+        <!-- Wind Velocity Card -->
+        <div class="bg-gray-100 rounded-lg p-4 text-gray-800">
+          <i class="fas fa-wind text-blue-500 text-3xl mb-2"></i>
+          <p class="text-lg font-semibold"><span id="angin">26</span> m/s</p>
+          <p class="text-sm">Wind Velocity</p>
+        </div>
+
+        <!-- Light Intensity Card -->
+        <div class="bg-gray-100 rounded-lg p-4 text-gray-800">
+          <i class="fas fa-sun text-blue-500 text-3xl mb-2"></i>
+          <p class="text-lg font-semibold"><span id="cahaya">21</span> lux</p>
+          <p class="text-sm">Light Intensity</p>
+        </div>
+
+        <!-- Battery Capacity Card -->
+        <div class="bg-gray-100 rounded-lg p-4 text-gray-800">
+          <i class="fas fa-battery-half text-blue-500 text-3xl mb-2"></i>
+          <p class="text-lg font-semibold"><span id="baterai">11</span> Volt</p>
+          <p class="text-sm">Battery Voltage</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Sticky Footer -->
+    <div class="sticky-footer mt-4 border-t pt-2 pb-2">
+        <div class="flex justify-around items-center">
+        <a href="Home.html" class="flex flex-col items-center text-gray-600 hover:text-blue-500">
+            <i class="fas fa-home text-xl"></i>
+            <span class="text-xs">Home</span>
+        </a>
+        <a href="Control.html" class="flex flex-col items-center text-gray-600 hover:text-blue-500">
+            <i class="fas fa-sliders-h text-xl"></i>
+            <span class="text-xs">Control</span>
+        </a>
+        <a href="User.html" class="flex flex-col items-center text-gray-600 hover:text-blue-500">
+            <i class="fas fa-user text-xl"></i>
+            <span class="text-xs">User</span>
+        </a>
+        </div>
+    </div>
+  
+  </div>
+
+  <script src="https://unpkg.com/mqtt/dist/mqtt.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

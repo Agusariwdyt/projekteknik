@@ -1,0 +1,23 @@
+.sticky-header, .sticky-footer {
+  position: sticky;
+  z-index: 10;
+  background: white;
+}
+.sticky-header {
+  top: 0;
+}
+.sticky-footer {
+  bottom: 0;
+}
+.scrollable-content {
+  max-height: 300px;
+  overflow-y: auto;
+}
+.card-container {
+    max-width: 300px;
+    width: 100%;
+    padding: 1.5rem;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
